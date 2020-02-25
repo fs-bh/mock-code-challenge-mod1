@@ -76,9 +76,63 @@ p 'Passengers who have traveled over 100 miles:'
 	p Passenger.premium_members
 	p "\n"
 
-p "\n\n"
 p '----------------------'
 p "\n\n"
+
+p 'Passenger in ride 17:'
+	p ride17.passenger
+p 'Passenger in ride 10:'
+	p ride10.passenger	
+	p "\n"
+
+p 'Driver in ride 1:'
+	p ride1.driver
+p 'Driver in ride 21:'
+	p ride21.driver
+	p "\n"
+
+p 'Distance of ride 13:'
+	p ride13.distance
+p 'Distance of ride 5:'
+	p ride5.distance
+	p "\n"
+
+p 'Average distance of all rides:'
+	p Ride.average_distance
+	p "\n"
+
+p '----------------------'
+p "\n\n"
+
+p 'Octavio\'s name:'
+	p d_octavio.name
+p 'Melinda\'s name:'
+	p d_octavio.name
+	p "\n"
+
+p 'Steve\'s Passengers:'
+	p d_steve.passenger_names
+p 'Jane\'s Passengers:'
+	p d_jane.passenger_names
+	p "\n"
+
+p 'Octavio\'s Rides:'
+	p d_octavio.rides
+p 'Jane\'s Rides:'
+	p d_jane.rides
+	p "\n"
+
+p 'All Drivers:'
+	p Driver.all
+	p "\n"
+
+p 'Drivers who have driven over 10 miles:'
+	p Driver.mileage_cap(10)
+p 'Drivers who have driven over 25 miles:'
+	p Driver.mileage_cap(25)
+
+
+
 
 
 
