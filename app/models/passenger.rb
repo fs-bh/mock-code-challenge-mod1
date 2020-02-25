@@ -22,4 +22,15 @@ class Passenger
 	def drivers
 		self.rides.map{|r| r.driver}.uniq
 	end
+
+	def total_distance
+		rides.sum{|r| r.distance}
+	end
+
+	def self.premium_members
+		self.all.select do |p|
+			p.total_distance > 100 
+		end
+	end
+
 end
