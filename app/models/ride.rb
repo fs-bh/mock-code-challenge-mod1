@@ -12,12 +12,12 @@ class Ride
 		@@all.push(self)
 		@driver = driver
 		@passenger = passenger
-		@distance = distance
+		@distance = distance.to_f
 	end
 
 	def self.average_distance
 		sum = self.all.sum{|r| r.distance}
-		num_of_rides self.all.length
+		num_of_rides = self.all.length
 		sum / num_of_rides
 	end
 end

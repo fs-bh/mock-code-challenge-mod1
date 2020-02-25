@@ -24,7 +24,7 @@ class Passenger
 	end
 
 	def total_distance
-		rides.sum{|r| r.distance}
+		self.rides.sum{|r| r.distance}
 	end
 
 	def self.premium_members

@@ -21,7 +21,7 @@ d_melinda = Driver.new('Dr. Melinda')
 
 ride01 = Ride.new(d_jane, larry, 3.2)
 ride02 = Ride.new(d_jane, larry, 2.52)
-ride03 = Ride.new(d_jane, larry, 1.32)
+ride03 = Ride.new(d_jane, larry, 131.32)
 ride04 = Ride.new(d_jane, jessica, 9.22)
 ride05 = Ride.new(d_octavio, jessica, 8.25)
 ride06 = Ride.new(d_octavio, jessica, 7.62)
@@ -44,92 +44,95 @@ ride22 = Ride.new(d_jane, dave, 1.21)
 
 
 
-p 'Dave\'s name:'
+puts 'Dave\'s name:'
 	p dave.name
-p 'Jessica\'s name:'
+puts 'Jessica\'s name:'
 	p jessica.name
-	p "\n"
+	puts ''
 
-p 'Rides Larry has taken:'
+puts 'Rides Larry has taken:'
 	p larry.rides
-p 'Rides Kaitlin has taken:'
+puts 'Rides Kaitlin has taken:'
 	p kaitlin.rides
-	p "\n"
+	puts ''
 
-p 'Drivers Dave has rode with:'
+puts 'Drivers Dave has rode with:'
 	p dave.rides
-p 'Drivers Jessica has rode with:'
+puts 'Drivers Jessica has rode with:'
 	p jessica.rides
-	p "\n"
+	puts ''
 
-p 'Total distance Larry has ridden:'
+puts 'Total distance Larry has ridden:'
 	p larry.total_distance
-p 'Total distance Kaitlin has ridden:'
+puts 'Total distance Kaitlin has ridden:'
 	p kaitlin.total_distance
-	p "\n"
+	puts ''
 
-p 'All passengers:'
+puts 'All passengers:'
 	p Passenger.all
-	p "\n"
+	puts ''
 
-p 'Passengers who have traveled over 100 miles:'
+puts 'Passengers who have traveled over 100 miles:'
 	p Passenger.premium_members
-	p "\n"
+	puts ''
 
-p '----------------------'
-p "\n\n"
+puts '----------------------'
+puts "\n\n"
 
-p 'Passenger in ride 17:'
+puts 'Passenger in ride 17:'
 	p ride17.passenger
-p 'Passenger in ride 10:'
+puts 'Passenger in ride 10:'
 	p ride10.passenger	
-	p "\n"
+	puts ''
 
-p 'Driver in ride 1:'
-	p ride1.driver
-p 'Driver in ride 21:'
+puts 'Driver in ride 1:'
+	p ride01.driver
+puts 'Driver in ride 21:'
 	p ride21.driver
-	p "\n"
+	puts ''
 
-p 'Distance of ride 13:'
+puts 'Distance of ride 13:'
 	p ride13.distance
-p 'Distance of ride 5:'
-	p ride5.distance
-	p "\n"
+puts 'Distance of ride 5:'
+	p ride05.distance
+	puts ''
 
-p 'Average distance of all rides:'
-	p Ride.average_distance
-	p "\n"
+puts 'Average distance of all rides:'
+	p Ride.average_distance.round(2)
+	puts ''
 
-p '----------------------'
-p "\n\n"
+puts '----------------------'
+puts ''
+puts ''
 
-p 'Octavio\'s name:'
+puts 'Octavio\'s name:'
 	p d_octavio.name
-p 'Melinda\'s name:'
-	p d_octavio.name
-	p "\n"
+puts 'Melinda\'s name:'
+	p d_melinda.name
+	puts ''
 
-p 'Steve\'s Passengers:'
+puts 'Steve\'s Passengers:'
 	p d_steve.passenger_names
-p 'Jane\'s Passengers:'
+puts 'Jane\'s Passengers:'
 	p d_jane.passenger_names
-	p "\n"
+	puts ''
 
-p 'Octavio\'s Rides:'
+puts 'Octavio\'s Rides:'
 	p d_octavio.rides
-p 'Jane\'s Rides:'
+puts 'Jane\'s Rides:'
 	p d_jane.rides
-	p "\n"
+	puts ''
 
-p 'All Drivers:'
+puts 'All Drivers:'
 	p Driver.all
-	p "\n"
+	puts ''
 
-p 'Drivers who have driven over 10 miles:'
-	p Driver.mileage_cap(10)
-p 'Drivers who have driven over 25 miles:'
+puts 'Drivers who have driven over 25 miles:'
 	p Driver.mileage_cap(25)
+puts 'Drivers who have driven over 30 miles:'
+	p Driver.mileage_cap(30)
+puts 'Drivers who have driven over 100 miles:'
+	p Driver.mileage_cap(100)	
 
 
 
@@ -139,6 +142,7 @@ p 'Drivers who have driven over 25 miles:'
 
 
 # binding.pry
-p "\n\n"
-p '----------------------'
-p '     End of Code'
+puts ''
+puts ''
+puts '----------------------'
+puts '     End of Code'

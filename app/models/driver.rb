@@ -23,12 +23,15 @@ class Driver
 		self.rides.map{|r| r.passenger.name}.uniq
 	end
 
-	def self.mileage_cap(distance)		# this function is not named well
-		my_float = distance.to_f
-		Ride.all.select do |d|
-			
-		end
+	def total_distance
+		self.rides.sum{|r| r.distance}
+	end
 
-		return 'under construction'
+	def self.mileage_cap(distance)		# this function is not named well
+		distance_float = distance.to_f
+
+		self.all.select do |d|
+			d.total_distance > distance_float
+		end
 	end
 end
